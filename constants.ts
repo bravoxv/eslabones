@@ -28,7 +28,7 @@ export const YOUTUBER_GROUP: Youtuber[] = [
   {
     id: 3,
     name: 'kronoxtoxity',
-    image: 'https://yt3.ggpht.com/ytc/AIdro_k6_K4xY8h_0wR-J-t1c8g5x4p-L2z4q7lZ_g=s500-c-k-c0x00ffffff-no-rj',
+    image: 'https://storage.googleapis.com/aai-web-samples/tickets/32766320/kronoxtoxity.png',
     youtubeChannelId: 'UC-lHJZR3Gqxm24_Vd_AJ5Yw',
     socials: {
       youtube: 'https://www.youtube.com/@Kronox_Toxity',
