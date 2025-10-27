@@ -4,7 +4,7 @@ export const YOUTUBER_GROUP: Youtuber[] = [
   {
     id: 1,
     name: 'Bravoxv',
-    image: 'https://yt3.ggpht.com/tHk0t1yLVAsq43ALb5y2Q9IM8c4gqWk3TqFUPR2u-4NgaemE1s4pQJ_-_p1Fz3sQJdG0P-yL=s500-c-k-c0x00ffffff-no-rj',
+    image: 'https://i.imgur.com/ZjL2QqN.jpeg',
     youtubeChannelId: 'UC-lHJZR3Gqxm24_Vd_AJ5Yw',
     socials: {
       youtube: 'https://www.youtube.com/@Bravo-XV',
