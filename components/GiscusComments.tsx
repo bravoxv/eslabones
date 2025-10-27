@@ -18,14 +18,12 @@ const GiscusComments: React.FC<GiscusCommentsProps> = ({ language }) => {
     script.async = true;
     script.crossOrigin = 'anonymous';
 
-    // IMPORTANT: Replace these with your own repository details
-    // You can generate these at https://giscus.app
-    script.setAttribute('data-repo', 'giscus/giscus-component');
-    script.setAttribute('data-repo-id', 'MDEwOlJlcG9zaXRvcnkzNTE5NTgwNTM=');
-    script.setAttribute('data-category', 'Announcements');
-    script.setAttribute('data-category-id', 'DIC_kwDOFComrc4CA_sA');
-    
-    script.setAttribute('data-mapping', 'pathname');
+    // Giscus configuration connected to the user's repository.
+    script.setAttribute('data-repo', 'bravoxv/eslabones');
+    script.setAttribute('data-repo-id', 'R_kgDOQJu-Nw');
+    script.setAttribute('data-category', 'General');
+    script.setAttribute('data-category-id', 'DIC_kwDOQJu-N84CxHAi');
+    script.setAttribute('data-mapping', 'url');
     script.setAttribute('data-strict', '0');
     script.setAttribute('data-reactions-enabled', '1');
     script.setAttribute('data-emit-metadata', '0');
@@ -33,7 +31,7 @@ const GiscusComments: React.FC<GiscusCommentsProps> = ({ language }) => {
     script.setAttribute('data-theme', 'transparent_dark');
     script.setAttribute('data-lang', language);
 
-    // Clear previous instance if it exists
+    // Clean up previous instance if it exists
     while (ref.current.firstChild) {
       ref.current.removeChild(ref.current.firstChild);
     }
