@@ -2,13 +2,15 @@ import React from 'react';
 import type { Language } from '../App';
 import { translations } from '../i18n';
 import { DiscordIcon } from './icons/DiscordIcon';
+import { ChatBubbleIcon } from './icons/ChatBubbleIcon';
 
 interface NavbarProps {
   language: Language;
   setLanguage: (language: Language) => void;
+  onShowComments: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ language, setLanguage }) => {
+const Navbar: React.FC<NavbarProps> = ({ language, setLanguage, onShowComments }) => {
   const t = translations[language];
 
   const langButtonClasses = (lang: Language) => 
@@ -26,6 +28,14 @@ const Navbar: React.FC<NavbarProps> = ({ language, setLanguage }) => {
           <div className="text-lg font-bold text-white">Eslabones</div>
           <div className="text-xs text-[var(--muted)] mt-0.5">Conectando con la comunidad</div>
         </div>
+         <button
+          onClick={onShowComments}
+          className="ml-4 flex items-center gap-2 rounded-full bg-black/20 px-3 py-2 text-sm text-[var(--muted)] transition-colors hover:text-white border border-white/10 hover:border-white/20"
+          aria-label={t.navComments}
+        >
+          <ChatBubbleIcon className="h-5 w-5" />
+          <span className="hidden sm:inline font-medium">{t.navComments}</span>
+        </button>
       </div>
       <div className="flex items-center gap-4">
         <nav className="hidden md:flex items-center gap-4">

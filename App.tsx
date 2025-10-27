@@ -5,13 +5,14 @@ import { translations } from './i18n';
 import MemberCard from './components/MemberCard';
 import SocialModal from './components/SocialModal';
 import Navbar from './components/Navbar';
-import GiscusComments from './components/GiscusComments';
+import CommentsModal from './components/CommentsModal';
 
 export type Language = 'es' | 'en';
 
 const App: React.FC = () => {
   const [selectedMember, setSelectedMember] = useState<Youtuber | null>(null);
   const [language, setLanguage] = useState<Language>('es');
+  const [showComments, setShowComments] = useState(false);
 
   const handleCardClick = (member: Youtuber) => {
     setSelectedMember(member);
@@ -70,7 +71,11 @@ const App: React.FC = () => {
       `}</style>
 
       <div className="w-full max-w-[1200px]">
-        <Navbar language={language} setLanguage={setLanguage} />
+        <Navbar 
+          language={language} 
+          setLanguage={setLanguage} 
+          onShowComments={() => setShowComments(true)}
+        />
 
         <section className="text-center py-12 px-4 mb-8 relative">
           <div 
@@ -96,16 +101,14 @@ const App: React.FC = () => {
             ))}
           </div>
         </main>
-
-        <section className="mt-16">
-          <h2 className="text-3xl font-bold text-center mb-8">{t.commentsTitle}</h2>
-          <div className="rounded-xl border border-white/5 bg-gradient-to-b from-white/5 to-white/0 p-4 sm:p-6 shadow-2xl shadow-black/60 backdrop-blur-md">
-            <GiscusComments language={language} />
-          </div>
-        </section>
       </div>
       
       <SocialModal member={selectedMember} onClose={handleCloseModal} language={language} />
+      <CommentsModal 
+        isOpen={showComments}
+        onClose={() => setShowComments(false)}
+        language={language}
+      />
     </div>
   );
 };
