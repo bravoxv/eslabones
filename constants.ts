@@ -40,7 +40,7 @@ export const YOUTUBER_GROUP: Youtuber[] = [
   {
     id: 4,
     name: 'Leodann',
-    image: 'https://static-cdn.jtvnw.net/jtv_user_pictures/3edacd5a-36e1-4927-82fa-89f14bcdfa79-profile_image.png',
+    image: 'https://i.postimg.cc/FHsKHN5B/44b898f8c6f5df919f0b13f627818424.png',
     youtubeChannelId: 'UC-lHJZR3Gqxm24_Vd_AJ5Yw',
     socials: {
       youtube: 'https://www.youtube.com/',
