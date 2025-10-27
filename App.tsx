@@ -24,7 +24,7 @@ const App: React.FC = () => {
   const t = translations[language];
 
   return (
-    <div className="flex justify-center p-6 sm:p-10">
+    <div className="relative z-10 flex justify-center p-6 sm:p-10">
       <style>{`
         @keyframes animate-gradient {
           0% { background-position: 0% center; }
