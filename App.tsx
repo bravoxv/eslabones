@@ -97,13 +97,13 @@ const App: React.FC = () => {
         <main>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 p-2">
             {YOUTUBER_GROUP.map((member) => (
-              <MemberCard key={member.id} member={member} onClick={handleCardClick} language={language} />
+              <MemberCard key={member.id} member={member} onClick={handleCardClick} />
             ))}
           </div>
         </main>
       </div>
       
-      <SocialModal member={selectedMember} onClose={handleCloseModal} language={language} />
+      <SocialModal member={selectedMember} onClose={handleCloseModal} />
       <CommentsModal 
         isOpen={showComments}
         onClose={() => setShowComments(false)}

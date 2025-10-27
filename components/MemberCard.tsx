@@ -1,14 +1,12 @@
 import React from 'react';
 import type { Youtuber } from '../types';
-import type { Language } from '../App';
 
 interface MemberCardProps {
   member: Youtuber;
   onClick: (member: Youtuber) => void;
-  language: Language;
 }
 
-const MemberCard: React.FC<MemberCardProps> = ({ member, onClick, language }) => {
+const MemberCard: React.FC<MemberCardProps> = ({ member, onClick }) => {
   const getInitial = (name: string) => name.charAt(0).toUpperCase();
 
   const renderMedia = () => {

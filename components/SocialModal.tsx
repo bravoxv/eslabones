@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import type { Youtuber } from '../types';
-import type { Language } from '../App';
 import { YoutubeIcon } from './icons/YoutubeIcon';
 import { TwitterIcon } from './icons/TwitterIcon';
 import { InstagramIcon } from './icons/InstagramIcon';
@@ -10,7 +9,6 @@ import { XIcon } from './icons/XIcon';
 interface SocialModalProps {
   member: Youtuber | null;
   onClose: () => void;
-  language: Language;
 }
 
 const SocialLink: React.FC<{ href?: string; icon: React.ReactNode; label: string }> = ({ href, icon, label }) => {
@@ -38,7 +36,7 @@ const SocialLink: React.FC<{ href?: string; icon: React.ReactNode; label: string
   );
 };
 
-const SocialModal: React.FC<SocialModalProps> = ({ member, onClose, language }) => {
+const SocialModal: React.FC<SocialModalProps> = ({ member, onClose }) => {
   useEffect(() => {
     const handleEsc = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -85,13 +83,11 @@ const SocialModal: React.FC<SocialModalProps> = ({ member, onClose, language }) 
           )}
         </div>
         
-        <div className="p-6 text-center">
-          <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400">{member.name}</h2>
-          <p className="mt-2 text-[var(--muted)]">{member.description[language]}</p>
-        </div>
-        
-        <div className="p-6 pt-0">
-          <div className="space-y-3">
+        <div className="p-6">
+          <h2 className="text-center text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-cyan-400">
+            {member.name}
+          </h2>
+          <div className="mt-6 space-y-3">
             <SocialLink href={member.socials.youtube} icon={<YoutubeIcon />} label="YouTube" />
             <SocialLink href={member.socials.twitch} icon={<TwitchIcon />} label="Twitch" />
             <SocialLink href={member.socials.twitter} icon={<TwitterIcon />} label="Twitter / X" />

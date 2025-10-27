@@ -11,6 +11,5 @@ export interface Youtuber {
   name: string;
   image?: string | null;
   youtubeChannelId: string;
-  description: { en: string; es: string };
   socials: SocialLinks;
 }
