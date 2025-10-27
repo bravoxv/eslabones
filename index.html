@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eslabones</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-1: #0f1b26;
+      --bg-2: #0b2230;
+      --muted: rgba(255, 255, 255, 0.65);
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      margin: 0;
+      background-color: #020617; /* Fallback background */
+      color: #eaf2ff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .landscape-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      background: #020617;
+    }
+    .landscape-bg::before, .landscape-bg::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.3;
+    }
+    /* Toxic clouds */
+    .landscape-bg::before {
+      width: 600px;
+      height: 400px;
+      left: -10%;
+      top: 5%;
+      background: radial-gradient(circle, #4ade80, transparent 60%);
+      animation: drift-green 30s linear infinite alternate;
+    }
+    .landscape-bg::after {
+      width: 800px;
+      height: 500px;
+      right: -15%;
+      bottom: 10%;
+      background: radial-gradient(circle, #a855f7, transparent 60%);
+      animation: drift-purple 40s linear infinite alternate;
+    }
+    /* Snowy biome */
+    .snowy-biome {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 25%;
+      background: linear-gradient(to top, rgba(230, 240, 255, 0.1), transparent 70%);
+      mask-image: radial-gradient(120% 100% at 50% 100%, black 40%, transparent 80%);
+      box-shadow: 0 -20px 40px rgba(0,0,0,0.5);
+    }
+    /* Stars */
+    .stars {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 20% 20%, white, transparent),
+        radial-gradient(1px 1px at 80% 10%, white, transparent),
+        radial-gradient(1px 1px at 50% 70%, white, transparent),
+        radial-gradient(0.5px 0.5px at 10% 90%, white, transparent),
+        radial-gradient(0.5px 0.5px at 90% 40%, white, transparent);
+      background-size: 300px 300px, 400px 400px, 250px 250px, 350px 350px, 450px 450px;
+    }
+    @keyframes drift-green {
+      from { transform: translateX(-10%) translateY(5%); }
+      to { transform: translateX(20%) translateY(-10%); }
+    }
+    @keyframes drift-purple {
+      from { transform: translateX(15%) translateY(-10%); }
+      to { transform: translateX(-20%) translateY(15%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="landscape-bg">
+    <div class="stars"></div>
+    <div class="snowy-biome"></div>
+  </div>
+  <div id="root"></div>
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://aistudiocdn.com/react@^19.2.0",
+      "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+      "react/": "https://aistudiocdn.com/react@^19.2.0/"
+    }
+  }
+  </script>
+  <script type="module" src="./index.tsx"></script>
+</body>
+</html>
