@@ -5,6 +5,8 @@ import { TwitterIcon } from './icons/TwitterIcon';
 import { InstagramIcon } from './icons/InstagramIcon';
 import { TwitchIcon } from './icons/TwitchIcon';
 import { XIcon } from './icons/XIcon';
+import { TiktokIcon } from './icons/TiktokIcon';
+import { KickIcon } from './icons/KickIcon';
 
 interface SocialModalProps {
   member: Youtuber | null;
@@ -90,6 +92,8 @@ const SocialModal: React.FC<SocialModalProps> = ({ member, onClose }) => {
           <div className="mt-6 space-y-3">
             <SocialLink href={member.socials.youtube} icon={<YoutubeIcon />} label="YouTube" />
             <SocialLink href={member.socials.twitch} icon={<TwitchIcon />} label="Twitch" />
+            <SocialLink href={member.socials.kick} icon={<KickIcon />} label="Kick" />
+            <SocialLink href={member.socials.tiktok} icon={<TiktokIcon />} label="TikTok" />
             <SocialLink href={member.socials.twitter} icon={<TwitterIcon />} label="Twitter / X" />
             <SocialLink href={member.socials.instagram} icon={<InstagramIcon />} label="Instagram" />
           </div>

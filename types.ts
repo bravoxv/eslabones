@@ -4,6 +4,8 @@ export interface SocialLinks {
   twitter?: string;
   instagram?: string;
   twitch?: string;
+  tiktok?: string;
+  kick?: string;
 }
 
 export interface Youtuber {

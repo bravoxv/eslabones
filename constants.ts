@@ -9,8 +9,10 @@ export const YOUTUBER_GROUP: Youtuber[] = [
     socials: {
       youtube: 'https://www.youtube.com/@Bravo-XV',
       twitter: 'https://twitter.com/',
-      instagram: 'https://www.instagram.com/',
+      instagram: 'https://www.instagram.com/bravoxv2025/',
       twitch: 'https://www.twitch.tv/bravoxv_',
+      tiktok: 'https://www.tiktok.com/@elbravoxv',
+      kick: 'https://kick.com/bravoxv',
     },
   },
   {
