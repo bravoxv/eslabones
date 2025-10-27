@@ -16,7 +16,7 @@ export const YOUTUBER_GROUP: Youtuber[] = [
   {
     id: 2,
     name: 'ICEGaming',
-    image: 'https://yt3.ggpht.com/1-lPzANx_J9AN06Q22Y5-FkQi-b--M-y722GOjgvQ3Hw8U8NbYwd0bnhgU3pqlHqBe81w8E3=s500-c-k-c0x00ffffff-no-rj',
+    image: 'https://i.imgur.com/GtdNG3H.png',
     youtubeChannelId: 'UC-lHJZR3Gqxm24_Vd_AJ5Yw',
     socials: {
       youtube: 'https://www.youtube.com/@ICEGAMINGCOMUNITY',
@@ -28,7 +28,7 @@ export const YOUTUBER_GROUP: Youtuber[] = [
   {
     id: 3,
     name: 'kronoxtoxity',
-    image: 'https://i.ibb.co/dsnfTtxW/b205f7db8497240f7a352fa56b7d28d5.webp',
+    image: 'https://i.imgur.com/e45tvAs.jpeg',
     youtubeChannelId: 'UC-lHJZR3Gqxm24_Vd_AJ5Yw',
     socials: {
       youtube: 'https://www.youtube.com/@Kronox_Toxity',
