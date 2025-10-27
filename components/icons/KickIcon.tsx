@@ -9,7 +9,6 @@ export const KickIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     fill="currentColor"
     {...props}
   >
-    <path d="M22.001 4.226H13.882l-3.333 4.226v-4.226H2v15.548h8.549v-4.832l4.226-5.342h7.226V4.226Z"/>
-    <path d="M13.882 19.774h8.119V9.568h-4.226l-3.893 4.832v5.374Z"/>
+    <path d="M4 4 H10 V10 H14 V4 H20 V10 L14 12 L20 14 V20 H14 V14 H10 V20 H4 Z"/>
   </svg>
 );

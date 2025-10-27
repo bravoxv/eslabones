@@ -25,12 +25,38 @@ const SocialLink: React.FC<{ href?: string; icon: React.ReactNode; label: string
     return null;
   }
 
+  const baseClasses = "flex items-center space-x-3 rounded-lg bg-white/5 p-3 text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500 group";
+  
+  let hoverClasses = 'hover:bg-white/10';
+  const socialName = label.toLowerCase().split(' ')[0];
+
+  switch(socialName) {
+    case 'youtube':
+      hoverClasses = 'hover:bg-[#FF0000]';
+      break;
+    case 'twitch':
+      hoverClasses = 'hover:bg-[#9146FF]';
+      break;
+    case 'kick':
+      hoverClasses = 'hover:bg-[#53FC18] hover:text-black';
+      break;
+    case 'tiktok':
+      hoverClasses = 'hover:bg-white hover:text-black';
+      break;
+    case 'twitter':
+      hoverClasses = 'hover:bg-white hover:text-black';
+      break;
+    case 'instagram':
+      hoverClasses = 'hover:bg-[#E1306C]';
+      break;
+  }
+
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center space-x-3 rounded-lg bg-white/5 p-3 text-white transition-colors duration-200 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-purple-500"
+      className={`${baseClasses} ${hoverClasses}`}
     >
       {icon}
       <span className="font-medium">{label}</span>
