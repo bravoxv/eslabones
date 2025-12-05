@@ -14,4 +14,5 @@ export interface Youtuber {
   image?: string | null;
   youtubeChannelId: string;
   socials: SocialLinks;
+  streamlabsUrl?: string;
 }

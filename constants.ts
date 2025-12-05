@@ -1,4 +1,6 @@
 import type { Youtuber } from './types';
+import kronoxImage from './assets/images/kronox.png';
+import iceGamingImage from './assets/images/icegaming.png';
 
 export const YOUTUBER_GROUP: Youtuber[] = [
   {
@@ -6,6 +8,7 @@ export const YOUTUBER_GROUP: Youtuber[] = [
     name: 'Bravoxv',
     image: 'https://i.imgur.com/ZjL2QqN.jpeg',
     youtubeChannelId: 'UC-lHJZR3Gqxm24_Vd_AJ5Yw',
+    streamlabsUrl: 'https://streamlabs.com/widgets/chat-box/v1/497FE0A5991B424AB683',
     socials: {
       youtube: 'https://www.youtube.com/@Bravo-XV',
       twitter: 'https://twitter.com/',
@@ -18,7 +21,7 @@ export const YOUTUBER_GROUP: Youtuber[] = [
   {
     id: 2,
     name: 'ICEGaming',
-    image: 'https://i.imgur.com/GtdNG3H.png',
+    image: iceGamingImage,
     youtubeChannelId: 'UC-lHJZR3Gqxm24_Vd_AJ5Yw',
     socials: {
       youtube: 'https://www.youtube.com/@ICEGAMINGCOMUNITY',
@@ -30,7 +33,7 @@ export const YOUTUBER_GROUP: Youtuber[] = [
   {
     id: 3,
     name: 'kronoxtoxity',
-    image: 'https://i.imgur.com/e45tvAs.jpeg',
+    image: kronoxImage,
     youtubeChannelId: 'UC-lHJZR3Gqxm24_Vd_AJ5Yw',
     socials: {
       youtube: 'https://www.youtube.com/@Kronox_Toxity',
